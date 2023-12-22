@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Taylor Mobile Login Page.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon.io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon.io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon.io/favicon-16x16.png">
+	<link rel="manifest" href="./favicon.io/site.webmanifest">
+</head>
+<body>
+	<div class="Layer1">
+		<div class="Layer1box">
+			<div class="logo-container">
+				<img class="logo" src="Pic/Onboarding Page/TU Logo.png" alt="TU Logo">
+			</div>
+		</div>
+	</div>
+	
+	<div class="Layer2">
+		<div class="logo-container">
+			<img class="logo" src="Pic/Onboarding Page/Taylor White Logo.png" alt="TU Logo">
+		</div>
+	</div>
+
+	<div class="welcome-text" id="welcomeText">Welcome Student</div>
+	
+	<div class="Layer3">
+		<img class="Layer3box" src="Pic/Onboarding Page/Taylor Onboarding Page Bg.png" alt="Background">
+		<div class="panel" id="slidingPanel">
+			<img src="Pic/Onboarding Page/Arrow up.png" alt="Arrow" class="arrow-up" onclick="toggleSlide()">
+			<div class="studentid">Student ID</div>
+			<div class="textbox1" placeholder="Type your Student ID">
+				<img class="userlogo" src="Pic/Onboarding Page/User.png" alt="User logo">
+				<div class="Typeyourstudentid">Type your Student ID</div>
+			</div>
+			<div class="password">Password</div>
+			<div class="textbox2">
+				<img class="locklogo" src="Pic/Onboarding Page/Lock.png" alt="Lock logo">
+				<div class="Typeyourstudentid">Type your Student ID</div>
+				<img class="visiblelogo" src="Pic/Onboarding Page/Visibility.png" alt="Visible logo">
+			</div>
+			<div class="login" id="loadingpageLink">
+				<div class="logintext">Login</div>
+			</div>
+			<div class="forgotten_password">Forgotten Password ?</div>
+		</div>
+	</div>
+
+	<script>
+		
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Get the white container element
+      var Layer1 = document.querySelector('.Layer1');
+
+      // Set a timeout to fade out the white container after 3 seconds
+      setTimeout(function () {
+        Layer1.style.opacity = 0;
+      }, 2000);
+    });
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		
+	     var Layer2 = document.querySelector('.Layer2');
+
+      // Set a timeout to fade out the white container after 3 seconds
+      setTimeout(function () {
+        Layer2.style.opacity = 0;
+      }, 3000);
+    });
+		
+		// Function to slide up the panel, rotate the image, and toggle welcome text
+		function toggleSlide() {
+			const panel = document.getElementById("slidingPanel");
+    		const image = document.querySelector(".arrow-up");
+    		const welcomeText = document.getElementById("welcomeText");
+			
+			// Toggle the rotation class on the image
+			image.classList.toggle("rotated");
+			
+			// Toggle the visibility of the welcome text
+			welcomeText.style.opacity = welcomeText.style.opacity === "1" ? "0" : "1";
+
+			// Slide up the panel
+			panel.style.transform = panel.style.transform === "translateY(-337px)" ? "translateY(0)" : "translateY(-337px)";
+		}
+		
+		// Wait for the page to load
+		document.addEventListener("DOMContentLoaded", function () {
+			
+			// Delay the slide-up effect by 2 seconds
+			setTimeout(toggleSlide, 4000);
+		});
+		
+		var loadingpageLink = document.getElementById('loadingpageLink');
+
+        // Attach click event listener to the div
+        loadingpageLink.addEventListener('click', function() {
+
+            // Adjust time
+            setTimeout(function() {
+                window.location.href = 'Taylor Mobile Loading Page.html';
+            }, 500);
+        });	
+		
+	</script>	
+	
+</body>
+</html>

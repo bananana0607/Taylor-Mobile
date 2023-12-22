@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Taylor Mobile Home Page.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+<body>
+<div class="toppanelgroup">
+	<div class="toppanelbox">
+		<div class="toppanelgroup2">
+			<div class="taylormobiletext" >Taylor Mobile</div>
+			<img class="TuLogo" src="Pic/Home Page/Taylor Logo.png" alt="Taylor Logo"/>
+		</div>
+	</div>
+</div>
+<div class="studentidgroup">
+    <div class="studentidbox">
+		<div class="goodafternoontext"> Good Afternoon,</div>
+		<div class="studentnametext" >Siew Yu Hong</div>
+		<img class="profilepic" src="Pic/Home Page/Profile Pic.png" alt="Profile Pic"/>
+	</div>
+</div>
+<div class="smartsearchgroup">
+	<div class="smartsearchbox">
+		<div class="smartsearchgroup2">
+			<div class="smartsearchtext">Smart Search</div>
+			<img class="smartsearchlogo" src="Pic/Home Page/Smart Search Logo.png" alt="Smart Search Logo">
+		</div>
+	</div>
+</div>
+<div class="whatsnewtext">What's New ?</div>
+<div class="carouselgroup">
+	<div class="notificationimagegroup">
+		<img class="notificationimage" src="Pic/Home Page/Notification Image.png" alt="img"/>
+	</div>
+	<div class="dotsgroup">
+		<div class="dots1"></div>
+		<div class="dots2"></div>
+		<div class="dots3"></div>
+	</div>
+<div class="leftclickgroup">
+	<div class="leftclickbox">
+		<img class="leftclickarrow" src="Pic/Home Page/Left Click Arrow.png" alt="Left Click Arrow"/>
+	</div>
+</div>
+<div class="rightclickgroup">
+	<div class="rightclickbox">
+		<img class="rightclickarrow" src="Pic/Home Page/Right Click Arrow.png" alt="Right Click Arrow"/>
+	</div>
+</div>
+</div>	
+<div class="shortcutbartext">Shortcut Bar</div>	
+<div class="attendancegroup">
+	<img class="backgroundimg" src="Pic/Home Page/Attendance.png" alt="Attendance">
+	<div class="titletext">Attendance</div>
+	<div class="notificationtext">** Unmarked Attendance</div>
+</div>
+<div class="timetablegroup">
+	<img class="backgroundimg" src="Pic/Home Page/Timetable.png" alt="Timetable">
+	<div class="titletext">Timetable</div>
+	<div class="notificationtext">** Unmarked Attendance</div>
+</div>
+	
+<div class="transportgroup" id="transportpageLink">
+	<img class="backgroundimg" src="Pic/Home Page/Transport.png" alt="Transport">
+	<div class="titletext">Transport</div>
+	<div class="notificationtext">** Bus arriving in 10 mins</div>
+</div>
+
+<div class="notificationlight" id="notificationlight"></div>	
+	
+<div class="taylorpaygroup">
+	<img class="backgroundimg" src="Pic/Home Page/Taylor Pay.png" alt="Taylor Pay">
+	<div class="titletext">Taylor Pay</div>
+</div>
+
+<div class="campusguidegroup">
+	<img class="backgroundimg" src="Pic/Home Page/Campus Guide.png" alt="Campus Guide">
+	<div class="campusguidetitletext">Campus Guide</div>
+</div>	
+
+<div class="othersgroup">
+	<img class="backgroundimg" src="Pic/Home Page/Others.png" alt="Others">
+	<div class="titletext">Others</div>
+</div>	
+<div class="logoutgroup" id="logoutLink">
+	<div class="logoutbox">
+		<div class="logouttext" >Logout
+		</div>
+	</div>
+</div>	
+<div class="bottomspace"></div>	
+<div class="bottompanelgroup">
+	<div class="bottompanelbox">
+		<img class="homeicon" src="Pic/Home Page/Home Icon.png" alt="Home Icon"/>
+		<img class="chaticon" src="Pic/Home Page/Chat Icon.png" alt=" Chat Icon"/> 
+	</div>	
+</div>
+	
+<script>
+     var transportpageLink = document.getElementById('transportpageLink');
+
+        transportpageLink.addEventListener('click', function() {
+
+            document.body.classList.add('fade-out');
+
+            setTimeout(function() {
+                window.location.href = 'Taylor Mobile Transport Page.html';
+            }, 500);
+        });
+	
+	 var logoutLink = document.getElementById('logoutLink');
+
+        logoutLink.addEventListener('click', function() {
+
+            document.body.classList.add('fade-out');
+
+            setTimeout(function() {
+                window.location.href = 'Taylor Mobile Login Page.html';
+            }, 2000);
+        });
+	
+	// Check the initial state from local storage
+  	var initialState = localStorage.getItem("notificationState");
+
+  	// If the initial state is "on", show the notification light
+  	if (initialState === "on") {
+		var notificationlight = document.getElementById("notificationlight");
+    	notificationlight.style.opacity = 1;
+  		}
+
+</script>
+</body>
+</html>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
