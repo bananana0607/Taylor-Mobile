@@ -3,6 +3,7 @@
 body{
 	font-family: 'Roboto';
 	background: #FBF9FA;
+	user-select: none;
 }
 .toppanelgroup{
 	width:360px; 

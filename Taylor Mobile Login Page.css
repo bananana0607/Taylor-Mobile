@@ -3,6 +3,7 @@
 
 Body{
 	font-family: "Roboto";
+	user-select: none;
 }
 
 .Layer1{
